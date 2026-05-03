@@ -24,6 +24,7 @@ age = st.number_input("Age", 18, 100, 30)
 country = st.selectbox("Country", ["USA", "Canada", "UK", "Germany", "France"])
 subscription_type = st.selectbox("Subscription Type", ["Basic", "Standard", "Premium"])
 monthly_fee = st.number_input("Monthly Fee", value=9.99)
+tenure_months= st.number_input("Tenure (Months)", value=12)
 last_login_days = st.number_input("Days Since Last Login", value=30)
 avg_usage = st.number_input("Avg Monthly Usage Hours", value=10.0)
 support_tickets = st.number_input("Support Tickets (6m)", value=1)
@@ -43,6 +44,7 @@ if st.button("Predict Churn"):
             'country':[country],
             'subscription_type':[subscription_type],
             'monthly_fee':[monthly_fee],
+            'tenure_months':[tenure_months],
             'last_login_days':[last_login_days],
             'avg_monthly_usage_hours':[avg_usage],
             'support_tickets_last_6m':[support_tickets],
